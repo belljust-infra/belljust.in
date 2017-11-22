@@ -1,0 +1,60 @@
+baseURL = "http://belljust.in/"
+languageCode = "en-us"
+title = "belljust.in"
+theme = "minimo"
+pygmentsStyle = "default"
+
+[params]
+  description = "Hi, I'm Justin! Student, web dev, and hobby roboticist. Nearly finished my BEng in Software at McGill Univeristy and actively looking for job opportunities."
+  dateFormat = "2006, Jan 2"
+  copyrightOwner = "belljustin"
+  copyrightStartYear = "2017"
+  hideEntryNavigation = false
+  hideSocialMenu = false
+  showReadTime = true
+
+[params.seo]
+  # Title Separator: - – — · • * ⋆ | ~ « » < >
+  titleSeparator = "•"
+
+[params.opengraph]
+  [params.opengraph.facebook]
+    admins = ""
+    appid = ""
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[author]
+  name = "Justin Bell"
+
+[author.social]
+  email = "justin.bell@mail.mcgill.ca"
+  github = "belljustin"
+  linkedin = "belljustin"
+
+[permalinks]
+  page = "/:slug/"
+
+[[menu.main]]
+  name = "Home"
+  weight = -70
+  identifier = "home"
+  url = "https://belljust.in/"
+
+[[menu.main]]
+  name = "Resume"
+  weight = -70
+  identifier = "resume"
+  url = "https://belljust.in/resume.pdf"
+
+# Language Configuration
+defaultContentLanguage = "en"
+
+[languages]
+  # edit this block for your own language
+  [languages.en]
+    lang = "en"
+    languageName = "English"
+    weight = 1
