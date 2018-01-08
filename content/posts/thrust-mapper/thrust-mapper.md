@@ -1,5 +1,5 @@
 ---
-title: "Thrust Mapper"
+title: "Thrust Mapper - Systems of Equations"
 date: 2017-12-07T13:07:05-04:00
 ---
 

@@ -68,23 +68,27 @@ $$
 
 But \\(A\\) isn't a square matrix so it does _not_ have an inverse!
 This actually makes sense if we look at the physical system.
-If there was an inverse, it would imply that there is a unique solution to every system
+If there was an inverse, it would imply that there is a unique solution to every system.
 
 ![Yaw maneuver using 2 different configurations](/img/thrust-mapper/AUV_Spin.png#center)
 
-The figure above illustrates the robot doing a yaw maneuver (spinning about the z-axis) using two configurations.
+The figure above illustrates the robot doing a yaw maneuver - spinning about the z-axis - using two configurations.
 On the left, only the bow and stern thrusters are used.
 On the right, only the port and starboard thrusters are used.[^1]
 
 In fact, we can redistribute this effort between these thrusters in an infinite number of ways to get the same overall effect.
-So no, A is not invertible, but there are solutions and this where the pseudo-inverse, \\(A^+\\) comes in handy.
+So no, A is not invertible, but there are many solutions.
+This where the pseudo-inverse, \\(A^+\\) comes in handy.
 
 ## The pseudo-Inverse
 
 I won't go into all [the details of pseudo-inverses](https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse) here but, for our purposes, it's helpful to note these facts:
-	- if \\(Ax=b\\) has \\(> 1\\) 1 solutions, \\(x = A^+b\\)
-	- \\(A^+\\) is unique
-	- \\(A^+\\) exists for all \\(A\\)
+
+if \\(Ax=b\\) has \\(> 1\\) solutions then \\(x = A^+b\\)
+
+\\(A^+\\) is unique
+
+\\(A^+\\) exists for all \\(A\\)
 
 The popular python matrix library, `numpy`, comes with a function for obtaining the pseudo-inverse, `numpy.linalg.pinv`
 
