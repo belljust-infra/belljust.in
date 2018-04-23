@@ -1,7 +1,5 @@
 # Main website
 server {
-	listen       80 default_server;
-	listen       [::]:80 default_server;
 	server_name  belljust.in www.belljust.in;
 	root         /usr/share/nginx/html;
 
@@ -56,12 +54,37 @@ server {
 		proxy_set_header Connection "upgrade";
 	}
 
-        listen 443 ssl; # managed by Certbot
-        ssl_certificate /etc/letsencrypt/live/belljust.in/fullchain.pem; # managed by Certbot
-        ssl_certificate_key /etc/letsencrypt/live/belljust.in/privkey.pem; # managed by Certbot
-        include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-
         if ($scheme != "https") {
             return 301 https://$host$request_uri;
         } # managed by Certbot
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/belljust.in/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/belljust.in/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
+}
+
+server {
+    if ($host = www.belljust.in) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = belljust.in) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+	listen       80 default_server;
+	listen       [::]:80 default_server;
+	server_name  belljust.in www.belljust.in;
+    return 404; # managed by Certbot
+
+
+
+
 }
