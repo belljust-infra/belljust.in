@@ -2,16 +2,17 @@ baseURL = "http://belljust.in/"
 languageCode = "en-us"
 title = "belljust.in"
 theme = "minimo"
-pygmentsStyle = "default"
 
 [params]
-  description = "Hi, I'm Justin! Student, web dev, and hobby roboticist. Nearly finished my BEng in Software at McGill Univeristy and actively looking for job opportunities."
   dateFormat = "2006, Jan 2"
   copyrightOwner = "belljustin"
   copyrightStartYear = "2017"
   hideEntryNavigation = false
   hideSocialMenu = false
   showReadTime = true
+
+[params.widgets]
+  homepage = ["recent_posts"]
 
 [params.seo]
   # Title Separator: - – — · • * ⋆ | ~ « » < >

@@ -153,4 +153,4 @@ def guest_play(b):
     # The last bit contains your opponent's response
     return m[-1]
 
-{{< \highlight >}}
+{{< /highlight >}}
