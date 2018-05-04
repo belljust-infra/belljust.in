@@ -1,6 +1,7 @@
 ---
 title: "Analyzing Return Times I - Sequential"
 date: 2017-08-28T13:07:05-04:00
+mathjax: true
 ---
 
 Rob Pike has a great [talk](https://www.youtube.com/watch?v=f6kdp27TYZs) about concurrency patterns in Go.

@@ -1,6 +1,7 @@
 ---
 title: "Thrust Mapper"
 date: 2017-12-07T13:07:05-04:00
+mathjax: true
 ---
 
 ## Meet Bradbury

@@ -1,6 +1,7 @@
 ---
 title: "Prisoner's Dilemma and Commitment Schemes"
 date: 2017-10-16T13:07:05-04:00
+mathjax: true
 ---
 
 ## Prisoner's Dilemma
@@ -75,7 +76,7 @@ What we need is some way to communicate that we've committed to a response witho
 This is exactly what a [commitment scheme](https://en.wikipedia.org/wiki/Commitment_scheme) provides.
 
 I learned about these thanks to an invaluable [answer](https://crypto.stackexchange.com/a/51961/51775) to my question on the cryptography stack exchange.
-It was also cool to learn that Claude Crepeau, a previous algorithm professor of mine, was one of the researches responsble for [formalizing the idea in 1988](http://crypto.cs.mcgill.ca/~crepeau/PDF/BCC88-jcss.pdf).
+It was also cool to learn that Claude Crepeau, a previous algorithm professor of mine, was one of the researchers responsible for [formalizing the idea in 1988](http://crypto.cs.mcgill.ca/~crepeau/PDF/BCC88-jcss.pdf).
 
 The basic idea is to send some commitment of the message, \\(c(a)\\), that can later be verified.
 Once, the commitment has been recieved, B can send it's message to A.

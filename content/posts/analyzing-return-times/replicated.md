@@ -2,6 +2,7 @@
 title: "Analyzing Return Times III - Replicated"
 date: 2017-09-11T13:00:00-04:00
 publishDate: 2017-09-11T13:00:00-04:00
+mathjax: true
 ---
 
 This time we'll discuss the replicated model for aggregrating search results.

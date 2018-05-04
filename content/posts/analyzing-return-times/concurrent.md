@@ -1,6 +1,7 @@
 ---
 title: "Analyzing Return Times II - Concurrent"
 date: 2017-09-04T13:00:00-04:00
+mathjax: true
 ---
 
 This time we'll discuss the concurrent model for aggregrating search results.
